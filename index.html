@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>إدارة البسطة</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0f766e">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/icon.svg">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div id="login" hidden>
+  <div class="lcard">
+    <div class="logo">🧺</div>
+    <h1>إدارة البسطة</h1><p>سجّل دخولك للمتابعة</p>
+    <label>اسم المستخدم<input id="lu" autocomplete="username"></label>
+    <label>كلمة السر<input id="lp" type="password" autocomplete="current-password"></label>
+    <button class="btn pri block" data-a="login">دخول</button>
+  </div>
+</div>
+
+<div id="app" hidden>
+  <header><button id="back" data-a="back">→</button><h2 id="title"></h2></header>
+  <main id="main"></main>
+ <nav>
+  <button data-r="home" data-a="go" data-v="home"><span>🏠</span>الرئيسية</button>
+  <button data-r="stock" data-a="go" data-v="stock"><span>📦</span>البضاعة</button>
+  <button data-r="sales" data-a="go" data-v="sales"><span>🛒</span>المبيعات</button>
+  <button data-r="debts" data-a="go" data-v="debts"><span>👥</span>الزبائن</button>
+  <button data-r="capital" data-a="go" data-v="capital"><span>💰</span>رأس المال</button>
+  <button data-r="more" data-a="go" data-v="more"><span>☰</span>المزيد</button>
+</nav>
+</div>
+
+<div id="ov" data-a="ov"><div id="sh"></div></div>
+<div id="toast"></div>
+
+<div id="inst">
+  <div class="box">
+    <div class="logo" style="margin-bottom:10px">🧺</div>
+    <h3>ثبّت التطبيق</h3>
+    <p id="instTxt">ثبّت تطبيق البسطة على جهازك لتفتحه بسرعة وتستخدمه حتى بدون إنترنت.</p>
+    <button class="btn pri" id="instBtn" data-a="doInstall">تثبيت التطبيق</button>
+    <button class="btn" data-a="instClose">لاحقًا</button>
+  </div>
+</div>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
